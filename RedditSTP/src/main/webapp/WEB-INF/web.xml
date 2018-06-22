@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<web-app>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+  <servlet>
+	    <servlet-name>AuthentificationServlet</servlet-name>
+	    <servlet-class>service.AuthentificationServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>AuthentificationServlet</servlet-name>
+        <url-pattern>/auth</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	    <servlet-name>RedditServlet</servlet-name>
+	    <servlet-class>service.RedditServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>RedditServlet</servlet-name>
+        <url-pattern>/reddit</url-pattern>
+  </servlet-mapping>-->
+
+	
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value>endPoint.TopicEntityEndpoint,endPoint.UserEntityEndpoint</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+
+</web-app>
