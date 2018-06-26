@@ -15,13 +15,40 @@
   </servlet-mapping>
   
   <servlet>
+	    <servlet-name>TopicsGenerationServlet</servlet-name>
+	    <servlet-class>service.TopicsGenerationServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>TopicsGenerationServlet</servlet-name>
+        <url-pattern>/topicsgeneration</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+	    <servlet-name>UsersGenerationServlet</servlet-name>
+	    <servlet-class>service.UsersGenerationServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>UsersGenerationServlet</servlet-name>
+        <url-pattern>/usersgeneration</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	    <servlet-name>GetTopTopicsServlet</servlet-name>
+	    <servlet-class>service.GetTopTopicsServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>GetTopTopicsServlet</servlet-name>
+        <url-pattern>/top10</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
 	    <servlet-name>RedditServlet</servlet-name>
 	    <servlet-class>service.RedditServlet</servlet-class> 
   </servlet>
   <servlet-mapping>
         <servlet-name>RedditServlet</servlet-name>
         <url-pattern>/reddit</url-pattern>
-  </servlet-mapping>-->
+  </servlet-mapping>
 
 	
   <servlet>
