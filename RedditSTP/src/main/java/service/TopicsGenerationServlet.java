@@ -43,7 +43,6 @@ public class TopicsGenerationServlet  extends HttpServlet {
 				}
 			}
 			
-			
 			msg.setProperty("body", "");
 			msg.setProperty("voters", voters);
 			msg.setProperty("karma", r.nextInt(100));

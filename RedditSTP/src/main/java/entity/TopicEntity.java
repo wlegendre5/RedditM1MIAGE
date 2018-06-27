@@ -13,8 +13,7 @@ import javax.jdo.annotations.PrimaryKey;
 public class TopicEntity {
 	@PrimaryKey
 	@Persistent(valueStrategy=IdGeneratorStrategy.IDENTITY)
-	String id;
-
+	 String id; 
 	@Persistent
 	String title;
 	@Persistent

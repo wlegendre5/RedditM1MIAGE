@@ -10,8 +10,7 @@ import javax.jdo.annotations.PrimaryKey;
 public class UserEntity {
 	@PrimaryKey
 	@Persistent(valueStrategy=IdGeneratorStrategy.IDENTITY)
-	Long id;
-
+	 Long id;
 	@Persistent
 	String name;
 	@Persistent

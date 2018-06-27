@@ -49,6 +49,15 @@
         <servlet-name>RedditServlet</servlet-name>
         <url-pattern>/reddit</url-pattern>
   </servlet-mapping>
+  
+      <servlet>
+	    <servlet-name>UpvoteServlet</servlet-name>
+	    <servlet-class>service.UpvoteServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>UpvoteServlet</servlet-name>
+        <url-pattern>/upvote</url-pattern>
+  </servlet-mapping>
 
 	
   <servlet>

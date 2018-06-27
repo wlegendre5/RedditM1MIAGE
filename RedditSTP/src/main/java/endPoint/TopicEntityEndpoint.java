@@ -5,12 +5,9 @@ import entity.TopicEntity;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
-import com.google.api.server.spi.config.ApiMethod.HttpMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Cursor;
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
 
 import java.util.HashMap;
@@ -122,8 +119,7 @@ public class TopicEntityEndpoint {
 	 * @param topicentity the entity to be updated.
 	 * @return The updated entity.
 	 */
-	@ApiMethod(
-		name = "updateTopicEntity")
+	@ApiMethod(name = "updateTopicEntity")
 	public TopicEntity updateTopicEntity(TopicEntity topicentity) {
 		PersistenceManager mgr = getPersistenceManager();
 		try {
