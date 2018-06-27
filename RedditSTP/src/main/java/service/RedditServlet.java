@@ -15,9 +15,8 @@ public class RedditServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/plain");
-		
-		
-		
+		HttpSession s = req.getSession();
+		resp.getWriter().println("coucou " + s.getAttribute("currentUser") + " jtm");	
 		
 	}
 }

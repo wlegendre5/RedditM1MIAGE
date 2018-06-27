@@ -3,7 +3,7 @@
 
 <head ng-app="redditHomePage">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <script src="WEB-INF/vue/home/script.js"></script>
+  <script src="vue/home/script.js"></script>
   <link rel="stylesheet" href="WEB-INF/vue/home/style.css">
 </head>
 
@@ -27,9 +27,10 @@
   	<td><a href="usersgeneration">Generer les users</a></td></br>
   	<td><a href="reddit">reddit</a></td></br>
   	<td><a href="upvote?idMSG=t35">upvote</a></td></br>
-  	 <td><a href="top10">top10</a></td></br>
+    <td><a href="top10">top10</a></td></br>
+    <td><a href="getvotes">get votes</a></td></br>
   </tr>
-
+  
    <form ng-submit="addTopic()">
     <input type="text" ng-model="sid" size="30" placeholder="add id">
     <input type="text" ng-model="stitle" size="30" placeholder="add title">

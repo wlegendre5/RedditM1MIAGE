@@ -42,6 +42,15 @@
   </servlet-mapping>
   
     <servlet>
+	    <servlet-name>GetTopVotesServlet</servlet-name>
+	    <servlet-class>service.GetTopVotesServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>GetTopVotesServlet</servlet-name>
+        <url-pattern>/top10</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
 	    <servlet-name>RedditServlet</servlet-name>
 	    <servlet-class>service.RedditServlet</servlet-class> 
   </servlet>
@@ -58,6 +67,15 @@
         <servlet-name>UpvoteServlet</servlet-name>
         <url-pattern>/upvote</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+	    <servlet-name>GetVotedTopicsServlet</servlet-name>
+	    <servlet-class>service.GetVotedTopicsServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>GetVotedTopicsServlet</servlet-name>
+        <url-pattern>/getvotes</url-pattern>
+  </servlet-mapping>
 
 	
   <servlet>
@@ -65,7 +83,7 @@
     <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
     <init-param>
       <param-name>services</param-name>
-      <param-value>endPoint.TopicEntityEndpoint,endPoint.UserEntityEndpoint</param-value>
+      <param-value>endPoint.TopicEntityEndpoint,endPoint.UserEntityEndpoint, endPoint.TopicEndpoint</param-value>
     </init-param>
   </servlet>
 

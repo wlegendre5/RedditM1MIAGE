@@ -13,6 +13,7 @@ import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 
+
 public class GetTopVotesServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
@@ -21,9 +22,6 @@ public class GetTopVotesServlet {
 
 		DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 
-		//Filter propertyFilter =
-		//	    new FilterPredicate("karma", FilterOperator.GREATER_THAN_OR_EQUAL, 90);
-		//Query q = new Query("Topic").setFilter(propertyFilter).addSort("karma", Query.SortDirection.DESCENDING);
 		Query q = new Query("Topic").addSort("karma", Query.SortDirection.DESCENDING);
 		 PreparedQuery pq= ds.prepare(q);
 		 List<Entity> results=pq.asList(FetchOptions.Builder.withLimit(10));

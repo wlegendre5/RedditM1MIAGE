@@ -8,18 +8,21 @@ import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
+import javax.persistence.Entity;
 
 @PersistenceCapable(identityType=IdentityType.APPLICATION)
+@Entity
 public class TopicEntity {
 	@PrimaryKey
 	@Persistent(valueStrategy=IdGeneratorStrategy.IDENTITY)
-	 String id; 
+	String id;
+
 	@Persistent
 	String title;
 	@Persistent
 	String body;
 	@Persistent
-	ArrayList<Long>  voters;
+	ArrayList<String>  voters;
 	@Persistent
 	int karma;
 	@Persistent
@@ -44,10 +47,10 @@ public class TopicEntity {
 	public void setBody(String body) {
 		this.body = body;
 	}
-	public ArrayList<Long> getVoters() {
+	public ArrayList<String> getVoters() {
 		return voters;
 	}
-	public void setVoters(ArrayList<Long> voters) {
+	public void setVoters(ArrayList<String> voters) {
 		this.voters = voters;
 	}
 	public int getKarma() {
@@ -72,3 +75,4 @@ public class TopicEntity {
 
 
 }
+
