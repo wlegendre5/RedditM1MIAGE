@@ -43,7 +43,6 @@ VARIATION :
 1000 - 100 : 40012 milliseconds
 5000 - 1000 : 167769 milliseconds
 
-~~~~~~~~~~
 
 READ (Récupération des topics pour lesquels un user a voté à partir du servlet contenu dans le lien "Mes topics upvote")
 Avec 100 voters : 94 milliseconds
