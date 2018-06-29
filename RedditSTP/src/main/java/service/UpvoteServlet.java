@@ -23,7 +23,7 @@ public class UpvoteServlet extends HttpServlet {
 			throws IOException {
 		resp.setContentType("text/plain");
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		//parametre dans l'URL
+	
 		if (req.getParameter("idMSG") != null) {
 			Filter keyFilter = new FilterPredicate("id", FilterOperator.EQUAL, req.getParameter("idMSG"));
 			Query q = new Query("Topic").setFilter(keyFilter);
@@ -33,14 +33,12 @@ public class UpvoteServlet extends HttpServlet {
 			int karma = Integer.parseInt(result.getProperty("karma").toString());
 			result.setProperty("karma", karma+1);
             datastore.put(result);
-		}
-		
+		}	
 	}
 	
 	public void doPut(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/plain");
-		// TODO Auto-generated method stub
 		doGet(req, resp);
 	}
 }

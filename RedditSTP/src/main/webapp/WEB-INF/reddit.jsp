@@ -17,7 +17,7 @@
   <h1>Welcome to our Reddit App</h1>
   
 <br>
-  	<h1>Our servlets:</h1> 
+  	<h1>TinyReddit :</h1> 
 <br>
 
 <ul>
@@ -25,11 +25,12 @@
   	<li><a href="usersgeneration">Generer les users</a></li>
     <li><a href="top10">Top10</a></li>
     <li><a href="getvotes">Mes Topics upvote</a></li>
-    <li><a href="getvotes">Deconnexion</a></li>
+    <li><a href="deco">Deconnexion</a></li>
   
   
 </ul>
-  <div class="col-md-6" style="padding-top: 10%;">
+  
+   <div class="col-md-6" style="padding-top: 10%;">
 	  <div class="text-center pagination-centered">
    <form ng-submit="addTopic()">
      <div class="form-group">
@@ -67,19 +68,12 @@
 					<span class="glyphicon glyphicon-chevron-down">    <form ng-submit="downvote(x.id)">
           <input class="btn-primary" type="submit" value="downvote">
     </form></span>
-    	<p class="lead">Ã©crit par : {{x.sender}}</p>
+    	<p class="lead">écrit par : {{x.sender}}</p>
 				</div>
 
 			</div>
 		</div>
   </div>
-  
-
-         
-
-
-
-
 
 
 <script>

@@ -14,12 +14,17 @@ import com.google.appengine.api.datastore.Entity;
 
 import entity.UserEntity;
 
+/*
+ * Servlet de fonctionnalité : Génération d'un jeu de données d'entités User dans le Datastore
+ * 100 entrées sont générées
+ * 
+ */
 public class UsersGenerationServlet  extends HttpServlet {
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/plain");
 		resp.getWriter().println("Start users generation");
-		
+		long startTime = System.currentTimeMillis();
 		Random r=new Random();
 		resp.getWriter().println("creating Users");
 
@@ -27,7 +32,7 @@ public class UsersGenerationServlet  extends HttpServlet {
 		DatastoreService datastore = DatastoreServiceFactory
 				.getDatastoreService();
 		
-		int max=10;
+		int max=100;
 		for (int i = 0; i < max; i++) {
 			Entity msg = new Entity("User", "u" + i);
 			int r_tmp = r.nextInt(100);
@@ -47,8 +52,8 @@ public class UsersGenerationServlet  extends HttpServlet {
 			msg.setProperty("lien", "");
 			datastore.put(msg);
 		}
-		resp.getWriter().println("done");
-		
+		long endTime = System.currentTimeMillis();
+		resp.getWriter().println("Done in " + (endTime - startTime) + " milliseconds");
 		
 	}
 }

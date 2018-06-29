@@ -10,6 +10,12 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 import javax.persistence.Entity;
 
+
+/*
+ * Classe TopicEntity
+ * Modèle de données utilisé pour représenter les topics
+ * 
+ */
 @PersistenceCapable(identityType=IdentityType.APPLICATION)
 @Entity
 public class TopicEntity {

@@ -15,6 +15,16 @@
   </servlet-mapping>
   
   <servlet>
+  
+  <servlet-name>DeconnexionServlet</servlet-name>
+	    <servlet-class>service.DeconnexionServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>DeconnexionServlet</servlet-name>
+        <url-pattern>/deco</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
 	    <servlet-name>TopicsGenerationServlet</servlet-name>
 	    <servlet-class>service.TopicsGenerationServlet</servlet-class> 
   </servlet>
@@ -41,25 +51,7 @@
         <url-pattern>/top10</url-pattern>
   </servlet-mapping>
   
-    <servlet>
-	    <servlet-name>GetTopVotesServlet</servlet-name>
-	    <servlet-class>service.GetTopVotesServlet</servlet-class> 
-  </servlet>
-  <servlet-mapping>
-        <servlet-name>GetTopVotesServlet</servlet-name>
-        <url-pattern>/top10</url-pattern>
-  </servlet-mapping>
-  
-    <servlet>
-	    <servlet-name>RedditServlet</servlet-name>
-	    <servlet-class>service.RedditServlet</servlet-class> 
-  </servlet>
-  <servlet-mapping>
-        <servlet-name>RedditServlet</servlet-name>
-        <url-pattern>/reddit</url-pattern>
-  </servlet-mapping>
-  
-      <servlet>
+  <servlet>
 	    <servlet-name>UpvoteServlet</servlet-name>
 	    <servlet-class>service.UpvoteServlet</servlet-class> 
   </servlet>

@@ -1,0 +1,32 @@
+/* Styles go here */
+
+.jumbotron{
+padding: 5px;
+margin : 30px;
+}
+@font-face {
+    font-family: 'lobster'; /*a name to be used later*/
+    src: url('fonts/fontLabSource/lobster.vfb'); /*URL to font*/
+}
+.plutoto .col-md-7{
+	background: Orange;
+	border-radius: 8px;
+}
+
+.col-md-3{
+	padding-top: 10%;
+	border-radius: 8px;
+}
+a .row{
+	color: Black;
+}
+	
+.jubotron .row .col-md-2{
+	color : DarkOrange;
+}
+.jobotron .row .col-md-12{
+	color: DarkOrange;
+}
+.jubotron a{
+	color: Black;
+}

@@ -1,11 +1,18 @@
 package entity;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
+
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+
+/*
+ * Classe UserEntity
+ * Modèle de données utilisé pour représenter les utilisateurs
+ * 
+ */
 @PersistenceCapable(identityType=IdentityType.APPLICATION)
 public class UserEntity {
 	@PrimaryKey
