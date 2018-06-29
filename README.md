@@ -36,19 +36,19 @@ Temps de réponse pour la récupération des topics sur lesquels l'user authenti
 
 WRITE (Génération de 1000 topics) :
 Avec 100 voters : 3984 milliseconds
-Avec 1000 voters : 43996 milliseconds
-Avec 5000 voters : 211765 milliseconds
+| Avec 1000 voters : 43996 milliseconds
+| Avec 5000 voters : 211765 milliseconds
 
 VARIATION :
-1000 - 100 : 40012 milliseconds
-5000 - 1000 : 167769 milliseconds
+(1000 - 100) : 40012 milliseconds
+(5000 - 1000): 167769 milliseconds
 
 
 READ (Récupération des topics pour lesquels un user a voté à partir du servlet contenu dans le lien "Mes topics upvote")
 Avec 100 voters : 94 milliseconds
-Avec 1000 voters : 5988 milliseconds
-Avec 5000 voters : 12653 milliseconds
+| Avec 1000 voters : 5988 milliseconds
+| Avec 5000 voters : 12653 milliseconds
 
 VARIATION
-1000 - 100 : 4653 milliseconds
-5000 - 1000 : 6665 milliseconds
+(1000 - 100) : 4653 milliseconds
+(5000 - 1000) : 6665 milliseconds
